@@ -1,1 +1,1 @@
-kubectl get nodes -o=jsonpath=’{.items[*].metadata.name}’ >  /tmp/nodes-beni
+kubectl get nodes -o json > /tmp/nodes-beni.json
