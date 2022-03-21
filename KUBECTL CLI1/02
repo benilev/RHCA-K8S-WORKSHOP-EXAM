@@ -1,0 +1,1 @@
+kubectl run messaging --generator=run-pod/v1 --restart=Never --image=redis:alpine -l tier=msg
