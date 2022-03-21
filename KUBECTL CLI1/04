@@ -1,0 +1,1 @@
+kubectl get nodes -o=jsonpath=’{.items[*].metadata.name}’ >  /tmp/nodes-beni
