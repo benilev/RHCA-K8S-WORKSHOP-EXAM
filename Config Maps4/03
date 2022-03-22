@@ -1,0 +1,28 @@
+kubectl run nginx --image=nginx --restart=Never --dry-run -o yaml &gt; nginx-pod.yml
+
+---------
+
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: nginx
+  name: nginx
+spec:
+  containers:
+  - image: nginx
+    name: nginx
+    resources: {}
+    envFrom:
+    - configMapRef:
+        name: keyvalcfgmap
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}
+
+kubectl create -f nginx-pod.yml
+--------
+verify:
+kubectl exec -it nginx -- env
+kubectl delete po nginx
