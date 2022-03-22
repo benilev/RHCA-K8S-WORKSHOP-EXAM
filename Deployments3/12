@@ -1,0 +1,3 @@
+kubectl delete deploy webapp
+
+kubectl delete hpa webapp
