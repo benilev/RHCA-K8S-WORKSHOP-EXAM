@@ -1,0 +1,21 @@
+kubectl set image deploy/webapp nginx=nginx:1.100
+
+kubectl rollout status deploy webapp (still pending state)
+
+-------------
+
+kubectl get pods (ImagePullErr)
+-------------
+
+kubectl rollout undo deploy webapp
+kubectl rollout status deploy webapp
+
+kubectl get pods
+
+---------------
+kubectl rollout history deploy webapp --revision=7
+
+----------
+kubectl set image deploy/webapp nginx=nginx:latest
+
+kubectl rollout history deploy webapp (No new revision)
