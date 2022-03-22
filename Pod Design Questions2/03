@@ -1,0 +1,1 @@
+kubeclt get pods --show-labels
