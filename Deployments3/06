@@ -1,0 +1,35 @@
+kubectl create deploy webapp --image=nginx:1.17.1 --dry-run -o yaml > webapp.yaml
+
+---------------------
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: webapp
+  name: webapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webapp
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: webapp
+    spec:
+      containers:
+      - image: nginx:1.17.1
+        name: nginx
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
+
+kubectl create -f webapp.yaml
+
+--------------
+kubectl describe deploy webapp | grep Image
