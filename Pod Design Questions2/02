@@ -1,0 +1,5 @@
+kubectl run nginx-dev1 --image=nginx --restart=Never --labels=env=dev
+kubectl run nginx-dev2 --image=nginx --restart=Never --labels=env=dev
+kubectl run nginx-dev3 --image=nginx --restart=Never --labels=env=dev
+kubectl run nginx-prod1 --image=nginx --restart=Never --labels=env=prod
+kubectl run nginx-prod2 --image=nginx --restart=Never --labels=env=prod
