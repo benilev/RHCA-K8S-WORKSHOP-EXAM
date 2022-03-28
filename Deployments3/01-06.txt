@@ -1,0 +1,17 @@
+1) kubectl create deploy webapp --image=nginx --dry-run -o yaml > webapp.yaml
+   vi webapp.yaml
+   kubectl apply -f webapp.yaml  
+
+2) kubectl rollout status deployments/webapp
+
+3) kubectl get replicaset
+
+4) kubectl get pods  -o yaml > webapp_pods.yaml 
+   kubectl get rs  -o yaml > webapp_rs.yaml      
+
+5) terminal1 : watch -d -n0.5 kubectl get pods
+   terminal2 : kubectl delete deploy webapp
+
+6) kubectl create deploy webapp --image=nginx:1.17.1 --dry-run -o yaml > webapp.yaml
+   vi webapp.yaml
+   kubectl apply -f webapp.yaml  
