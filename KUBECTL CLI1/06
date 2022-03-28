@@ -1,1 +1,0 @@
-kubectl get service messaging --port=6379 --name messaging-service -n default -o yaml > service.yaml

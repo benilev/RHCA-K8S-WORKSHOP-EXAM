@@ -1,1 +1,0 @@
-kubectl run temp-bus --image=redis:alpine --namespace=finance-beni --restart=Never
