@@ -1,4 +1,0 @@
-kubectl label pod nginx-dev{1..3} app=nginx
-kubectl label pod nginx-prod{1..2} app=nginx
-
-kubectl get po --show-labels

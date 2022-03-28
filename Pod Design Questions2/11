@@ -1,3 +1,0 @@
-kubectl label pod/nginx-dev3 env=uat --overwrite
-
-kubectl get pods --show-labels
