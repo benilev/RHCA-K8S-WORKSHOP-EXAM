@@ -1,6 +1,0 @@
-cat &gt;&gt; config.txt &lt;&lt; EOF
-key1=value1
-key2=value2
-EOF
-
-cat config.txt
