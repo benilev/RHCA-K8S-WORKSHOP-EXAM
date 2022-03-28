@@ -1,5 +1,0 @@
-kubectl rollout history deploy webapp
-
-kubectl get deploy webapp --show-labels
-kubectl get rs -l app=webapp
-kubectl get po -l app=webapp

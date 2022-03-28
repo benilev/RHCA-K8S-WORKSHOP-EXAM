@@ -1,3 +1,0 @@
-kubectl delete deploy webapp
-
-kubectl get po -l app=webapp -w

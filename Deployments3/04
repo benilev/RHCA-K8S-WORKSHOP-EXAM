@@ -1,3 +1,0 @@
-kubectl get rs -l app=webapp -o yaml
-
-kubectl get po -l app=webapp -o yaml

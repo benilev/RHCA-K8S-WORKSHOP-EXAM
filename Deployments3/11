@@ -1,5 +1,0 @@
-kubectl autoscale deploy webapp --min=10 --max=20 --cpu-percent=85
-
-kubectl get hpa
-
-kubectl get pod -l app=webapp
